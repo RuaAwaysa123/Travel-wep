@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Travel</title>
+    <link rel="stylesheet" href="home1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!--   ........................................................ -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!--    ......................................-->
+
+    <style>
+        body {
+
+
+            background: #e2eaef;
+            font-family: "Open Sans", sans-serif;
+        }
+        h2 {
+            color: #000;
+            font-size: 26px;
+            font-weight: 300;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            margin: 30px 0 60px;
+        }
+        h2::after {
+            content: "";
+            width: 100px;
+            position: absolute;
+            margin: 0 auto;
+            height: 4px;
+            border-radius: 1px;
+            background: #7ac400;
+            left: 0;
+            right: 0;
+            bottom: -20px;
+        }
+        .carousel {
+            margin: 50px auto;
+            padding: 0 70px;
+        }
+        .carousel .item {
+            color: #747d89;
+            min-height: 325px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .carousel .thumb-wrapper {
+            padding: 25px 15px;
+            background: #fff;
+            border-radius: 6px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+        }
+        .carousel .item .img-box {
+            height: 120px;
+            margin-bottom: 20px;
+            width: 100%;
+            position: relative;
+        }
+        .carousel .item img {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+        .carousel .item h4 {
+            font-size: 18px;
+        }
+        .carousel .item h4, .carousel .item p, .carousel .item ul {
+            margin-bottom: 5px;
+        }
+        .carousel .thumb-content .btn {
+            color: #7ac400;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: none;
+            border: 1px solid #7ac400;
+            padding: 6px 14px;
+            margin-top: 5px;
+            line-height: 16px;
+            border-radius: 20px;
+        }
+        .carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
+            color: #fff;
+            background: #7ac400;
+            box-shadow: none;
+        }
+        .carousel .thumb-content .btn i {
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        .carousel .item-price {
+            font-size: 13px;
+            padding: 2px 0;
+        }
+        .carousel .item-price strike {
+            opacity: 0.7;
+            margin-right: 5px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            height: 44px;
+            width: 40px;
+            background: #7ac400;
+            margin: auto 0;
+            border-radius: 4px;
+            opacity: 0.8;
+        }
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            background: #78bf00;
+            opacity: 1;
+        }
+        .carousel-control-prev i, .carousel-control-next i {
+            font-size: 36px;
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            margin: -19px 0 0 0;
+            z-index: 5;
+            left: 0;
+            right: 0;
+            color: #fff;
+            text-shadow: none;
+            font-weight: bold;
+        }
+        .carousel-control-prev i {
+            margin-left: -2px;
+        }
+        .carousel-control-next i {
+            margin-right: -4px;
+        }
+        .carousel-indicators {
+            bottom: -50px;
+        }
+        .carousel-indicators li, .carousel-indicators li.active {
+            width: 10px;
+            height: 10px;
+            margin: 4px;
+            border-radius: 50%;
+            border: none;
+        }
+        .carousel-indicators li {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .carousel-indicators li.active {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .carousel .wish-icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 99;
+            cursor: pointer;
+            font-size: 16px;
+            color: #abb0b8;
+        }
+        .carousel .wish-icon .fa-heart {
+            color: #ff6161;
+        }
+        .star-rating li {
+            padding: 0;
+        }
+        .star-rating i {
+            font-size: 14px;
+            color: #ffc000;
+        }
+        div.img{
+            width: 350px;
+            height: 350px;
+            font-size: 14px;
+            font-weight: bold;
+            margin:5px 5px 5px 20px;
+            text-align: center;
+            background-color: aliceblue;
+            padding: 10px;
+            float: left;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".wish-icon i").click(function(){
+                $(this).toggleClass("fa-heart fa-heart-o");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="banner">
+    <div class="navbar" id="ho">
+
+        <ul>
+            <li><a href="#" >Home</a> </li>
+            <li><a href="#roaa" >About</a> </li>
+            <li><a href="#ser" >Service</a> </li>
+            <li><a href="#rre" >Tour list</a> </li>
+            <li><a href="#rer" >contact</a> </li>
+        </ul>
+
+    </div>
+    <div class="content" >
+        <h1>Never Stop to <br>explore the world </h1>
+        <p>
+
+        </p>
+        <div>
+          <a href="login.php"> <button type="button">  <span></span> Get started </button> </a>
+        </div>
+
+    </div>
+</div>
+
+<!--About us Section -->
+<section class="about">
+    <div class="main">
+        <img src="about.jfif" class="img1" id="roaa">
+
+        <div class="about_us">
+            <h2>about</h2>
+          <br>
+            <br>
+            <p > Man is a traveler by nature. He does not like to keep static at a place for a long time. So, people like to visit new places whenever they find time and opportunity. People travel for different purposes. Some travel for getting an education and some travel for pleasure. Many people also travel for business and employment.</p>
+        </div>
+    </div>
+
+</section>
+
+<!--services................... -->
+<div class="service">
+    <div class="title">
+        <h2 id="ser">Our services </h2>
+    </div>
+    <!--    end div title-->
+    <div class="box">
+        <div class="card"></divclass>
+            <i class="fa-solid fa-user"></i>
+            <h5>Hotel</h5>
+            <div class="pra">
+                <p> see most popular hotel in your next distination</p>
+                <p> <a class="button" href="#">Home  </a></p>
+            </div>
+        </div> <!--  card-->
+
+
+        <div class="card"></divclass>
+            <i class="fa-solid fa-utensils"></i>
+            <h5>Resturant  </h5>
+            <div class="pra">
+                <p>see most popular resturant in your next distination   </p>
+                <p> <a class="button" href="#">Home  </a></p>
+            </div>
+        </div> <!--  card-->
+
+        <div class="card"></divclass>
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h5>Special place  </h5>
+            <div class="pra">
+                <p> Every city in world has its traditional .....</p>
+                <p> <a class="button" href="#">Home  </a></p>
+            </div>
+        </div> <!--  card-->
+
+
+    </div> <!--    end div Box-->
+
+</div>
+<!-- end div service -->
+
+
+
+<div class="container-xl">
+    <div class="row">
+        <div class="col-md-12"   id="rre">
+            <h2>Featured <b>Places</b></h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item carousel-item active">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="images1/pexels-mudassir-ali-1878293.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="thumb-content" >
+                                        <h4>Turkey</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="amrica.jpg" class="img-fluid" alt="Headphone">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>Amrica</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="ff.png" class="img-fluid" alt="Macbook">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>Franch</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="rosia1.jpg" class="img-fluid" alt="Nikon">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>Rosia</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item carousel-item">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="all.jfif" class="img-fluid" alt="Play Station">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>Almania</h4>
+
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                      <br>
+                                      <br>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="DD.jfif" class="img-fluid" alt="Macbook">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>AL_MALDIF</h4>
+
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                                            </ul>
+                                        </div>
+                                       <br>
+                                        <br>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="mal.jfif" class="img-fluid" alt="Speaker">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>Malizia</h4>
+
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                      <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="dubai.jfif" class="img-fluid" alt="Galaxy">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>Dubai</h4>
+
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                      <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item carousel-item">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="ok.jfif" class="img-fluid" alt="iPhone">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>Okrania</h4>
+
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="hend.jfif" class="img-fluid" alt="Canon">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>India</h4>
+
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                      <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="hol.jfif" class="img-fluid" alt="Pixel">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>holanda</h4>
+
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                                            </ul>
+                                        </div>
+                                       <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="astr.jfif" class="img-fluid" alt="Watch">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>Astralia</h4>
+
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                      <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--***************************end*****************************************-->
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- Footer -->
+<section id="footer">
+    <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+            <div class="col-xs-12 col-sm-4 col-md-4" id="rer">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="#ho"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="#roaa"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100008417551296" target="_blank"><i class="fa fa-angle-double-right"></i> FaceBook Roaa Qino</a></li>
+                    <li><a href="#ho"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="#ho"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="#roaa"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a href="https://www.facebook.com/ruoa.awaysa" target="_blank"><i class="fa fa-angle-double-right"></i>Facebook Roaa Awaysa</a></li>
+                    <li><a href="#ho"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>WhatsApp</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                <ul class="list-unstyled list-inline social text-center">
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+
+            <hr>
+        </div>
+    </div>
+</section>
+<!-- ./Footer -->
+</body>
+</html>
